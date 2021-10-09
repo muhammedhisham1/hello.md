@@ -13,6 +13,7 @@ This page is created to exibit my activities and experiments on IoT.
 * Jumber Wires (male to male) x2
 
 ### code
+
 int ledPin = 10; // define digital pin 10.
 void setup()
 {
@@ -29,9 +30,9 @@ delay(1000); // wait for a second
 
 ### Video
 <iframe Width="600" height="315" src="http://" title=" Youtube video player>
+__                                                      
                                                       
-                                                      
-## Experiment 2: Traffic Light
+## Experiment 2 : Traffic Light
                                                       
 ###  Hardware needed
 * Arduino Uno Board x1
