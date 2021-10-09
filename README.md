@@ -149,7 +149,9 @@ else
   
 ### Video
 <iframe Width="600" height="315" src="http://" title=" Youtube video player>
-___                                                      
+___ 
+                                                      
+                                                      
 ## Experiment 5 :  Buzzer
                                                       
 ### Hardware Required
@@ -159,7 +161,7 @@ ___
 *Breadboard Jumper Wire x2
 *USB cable x1                                                      
   
- ### Code
+### Code
 int buzzer=8;// initialize digital IO pin that controls the buzzer
 void setup() 
 { 
