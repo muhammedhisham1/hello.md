@@ -12,7 +12,7 @@ This page is created to exibit my activities and experiments on IoT.
 * Breadboard
 * Jumber Wires (male to male) x2
 
-###code
+### code
 int ledPin = 10; // define digital pin 10.
 void setup()
 {
