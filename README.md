@@ -118,12 +118,9 @@ void loop()
 ### Simulation
 ![Start Simulating (2)](https://user-images.githubusercontent.com/84323483/137469264-4e8591d4-6d59-4ec7-b364-5272f3b18a33.png)
 
- 
-  
-  
- ## Experiment 4 : Button Controlled LED
-  
- ### Hardware Required
+ ## Experiment 4 :  Button Controlled LED
+                                                      
+### Hardware Required
 * Arduino Uno
 * Button switch x1
 * Red M5 LED x1
@@ -131,11 +128,11 @@ void loop()
 * 10KΩ Resistor x1
 * Breadboard x1
 * Breadboard Jumper Wire x6
-* USB cable x1
+* USB cable x1                                                      
   
- ### Code
-  ```
-  int ledpin=11;// initialize pin 11
+### Code
+```                                                      
+int ledpin=11;// initialize pin 11
 int inpin=7;// initialize pin 7
 int val;// define val
 void setup()
@@ -151,10 +148,11 @@ if(val==LOW)// check if the button is pressed, if yes, turn on the LED
 else
 { digitalWrite(ledpin,HIGH);}
 }
- ``` 
-### Simulation
 
-![Start Simulating (4)](https://user-images.githubusercontent.com/84323483/137469535-c6d52781-2b45-4472-94b6-2aa307e398e7.png)
+### Simulation
+![Start Simulating (4)](https://user-images.githubusercontent.com/84323483/137473867-dcf15083-d846-48c5-9d64-c50e775e06ee.png)
+
+                           
 
                                                       
                                                       
