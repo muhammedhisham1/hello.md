@@ -177,7 +177,7 @@ void loop()
 digitalWrite(buzzer, HIGH); // produce sound
 }
  ```                                                     
-###Simulation
+### Simulation
 ![Start Simulating (7)](https://user-images.githubusercontent.com/84323483/137471268-1b407483-0ea9-4f1c-9f35-2e8bcd91e3cf.png)
                                                    
                                                    
