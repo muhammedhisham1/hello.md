@@ -13,13 +13,12 @@ This page is created to exibit my activities and experiments on IoT.
 * Jumber Wires (male to male) x2
 
 ### code
-
-void setup() 
-{ 
-  pinMode(8, OUTPUT);
-} 
-void loop() 
-{
+void setup() <br>
+{ <br>
+  pinMode(8, OUTPUT);<br>
+}<br> 
+void loop() <br>
+{<br>
   digitalWrite(8, HIGH);
   delay(1000);
   digitalWrite(8, LOW);
