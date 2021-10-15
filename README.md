@@ -29,7 +29,8 @@ void loop()
 
 ### simulation
 
-                                                     
+    ![Start Simulating](https://user-images.githubusercontent.com/84323483/137469042-aba21feb-941b-422f-9741-51f351075776.png)
+                                                 
                                                       
 ## Experiment 2 : Traffic Light
                                                       
@@ -73,8 +74,9 @@ delay(5000);// wait 5 seconds
 digitalWrite(redled, LOW);// turn off red LED
 }
  ```
-### Video
-<iframe Width="600" height="315" src="http://" title=" Youtube video player>
+### Simulation
+![Start Simulating (1)](https://user-images.githubusercontent.com/84323483/137469168-83254954-6740-4d58-a721-562f17ad528b.png)
+
  
   
 ## Experiment 3 : LED Chasing Effect
@@ -113,8 +115,9 @@ void loop()
 }
  ```                          
                               
-### Video
-<iframe Width="600" height="315" src="http://" title=" Youtube video player>
+### Simulation
+![Start Simulating (2)](https://user-images.githubusercontent.com/84323483/137469264-4e8591d4-6d59-4ec7-b364-5272f3b18a33.png)
+
  
   
   
@@ -149,8 +152,9 @@ else
 { digitalWrite(ledpin,HIGH);}
 }
  ``` 
-### Video
-<iframe Width="600" height="315" src="http://" title=" Youtube video player>
+### Simulation
+
+![Start Simulating (4)](https://user-images.githubusercontent.com/84323483/137469535-c6d52781-2b45-4472-94b6-2aa307e398e7.png)
 
                                                       
                                                       
@@ -175,5 +179,51 @@ void loop()
 digitalWrite(buzzer, HIGH); // produce sound
 }
  ```                                                     
-### Video
-<iframe Width="600" height="315" src="http://" title=" Youtube video player>                                                      
+###Simulation
+![Start Simulating (7)](https://user-images.githubusercontent.com/84323483/137471268-1b407483-0ea9-4f1c-9f35-2e8bcd91e3cf.png)
+                                                   
+                                                   
+## Experiment 6: 
+                                                      
+### Hardware Required
+* Arduino Uno
+* RED Led x1
+* Resistor x3
+* Breadboard x1
+* Breadboard Jumper Wire x5
+* USB cable x1                                                      
+  
+### Code
+```                                                      
+int red = 11;
+int blue =10;
+int green =9;
+int x;
+void setup() {
+  pinMode(red, OUTPUT);
+  pinMode(blue, OUTPUT);
+  pinMode(green, OUTPUT);
+  Serial.begin(9600);
+}
+void loop() 
+{
+for(x=255; x>0; x--)
+  {
+   analogWrite(11, x);
+   analogWrite(10, 255-x);
+   analogWrite(9, 128-x);
+   delay(10); 
+  }
+for(x=0; x<255; x++)
+  {
+   analogWrite(11, x);
+   analogWrite(10, 255-x);
+   analogWrite(9, 128-x);
+   delay(10); 
+  }
+ Serial.println(x, DEC);
+}
+ ```                                                     
+###Simulation
+![Start Simulating (7)](https://user-images.githubusercontent.com/84323483/137471268-1b407483-0ea9-4f1c-9f35-2e8bcd91e3cf.png)
+                                              
