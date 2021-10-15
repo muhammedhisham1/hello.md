@@ -79,12 +79,12 @@ digitalWrite(redled, LOW);// turn off red LED<br>
 ## Experiment 3 : LED Chasing Effect
 
 ### Hardware required
-*Led x6
-*Arduino board x1
-*220Ω resistor x6
-*Breadboard x1
-*USB cable x1
-*Breadboard wire x13                                                    
+* Arduino Uno Board x1
+* USB Cable xl
+* LED (Any Color)x1
+* 220 OHM Resistor x1
+* Breadboard
+* Jumber Wires (male to male) x2                                                 
 
 ### Code
   int BASE = 2 ;  // the I/O pin for the first LED<br>
