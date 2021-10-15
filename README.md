@@ -14,17 +14,16 @@ This page is created to exibit my activities and experiments on IoT.
 
 ### code
 
-int ledPin = 10; // define digital pin 10.
-void setup()
+void setup() 
+{ 
+  pinMode(8, OUTPUT);
+} 
+void loop() 
 {
-pinMode(ledPin, OUTPUT);// define pin with LED connected as output.
-}
-void loop()
-{
-digitalWrite(ledPin, HIGH); // set the LED on.
-delay(1000); // wait for a second.
-digitalWrite(ledPin, LOW); // set the LED off.
-delay(1000); // wait for a second
+  digitalWrite(8, HIGH);
+  delay(1000);
+  digitalWrite(8, LOW);
+  delay(1000);
 }
 
 
