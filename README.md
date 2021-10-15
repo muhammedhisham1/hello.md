@@ -28,9 +28,7 @@ void loop()
 ```
 
 ### simulation
-
-    ![Start Simulating](https://user-images.githubusercontent.com/84323483/137469042-aba21feb-941b-422f-9741-51f351075776.png)
-                                                 
+![Start Simulating](https://user-images.githubusercontent.com/84323483/137472027-0d75b922-a10f-40c4-bdfa-54ee23c10558.png)
                                                       
 ## Experiment 2 : Traffic Light
                                                       
@@ -224,6 +222,7 @@ for(x=0; x<255; x++)
  Serial.println(x, DEC);
 }
  ```                                                     
-###Simulation
-![Start Simulating (7)](https://user-images.githubusercontent.com/84323483/137471268-1b407483-0ea9-4f1c-9f35-2e8bcd91e3cf.png)
+### Simulation
+![Start Simulating (11)](https://user-images.githubusercontent.com/84323483/137471879-8316a53c-ee13-4d44-82db-a877311143fc.png)
+
                                               
