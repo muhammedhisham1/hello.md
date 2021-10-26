@@ -30,7 +30,7 @@ void loop()
 ```
 
 ### simulation
-![Start Simulating](https://user-images.githubusercontent.com/84323483/137472027-0d75b922-a10f-40c4-bdfa-54ee23c10558.png)
+<video src="C:\Users\sabah\OneDrive\Desktop" controls="" width="50%" height="150%"></video>
                                                       
 ## Experiment 2 : Traffic Light
                                                       
