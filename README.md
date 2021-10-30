@@ -75,11 +75,9 @@ delay(5000);// wait 5 seconds
 digitalWrite(redled, LOW);// turn off red LED
 }
  ```
-### Simulation
-![Start Simulating (1)](https://user-images.githubusercontent.com/84323483/137469168-83254954-6740-4d58-a721-562f17ad528b.png)
+### video
+<video src="https://user-images.githubusercontent.com/84323483/139533812-d6b19522-c7ad-475d-a2e4-48a28e977081.mp4"" controls="" width="50%" height="150%"></video>
 
- 
-  
 ## Experiment 3 : LED Chasing Effect
 
 ### Hardware required
@@ -116,8 +114,8 @@ void loop()
 }
  ```                          
                               
-### Simulation
-![Start Simulating (2)](https://user-images.githubusercontent.com/84323483/137469264-4e8591d4-6d59-4ec7-b364-5272f3b18a33.png)
+### video
+<video src="https://user-images.githubusercontent.com/84323483/139533852-394b1d95-5546-4ff4-a7e0-c5cf8d3a5c28.mp4" controls="" width="50%" height="150%"></video>
 
 
 ## Experiment 4 :  Button Controlled LED                                                     
@@ -150,12 +148,10 @@ else
 { digitalWrite(ledpin,HIGH);}
 }
 ```
-### Simulation
-![Start Simulating (4)](https://user-images.githubusercontent.com/84323483/137473867-dcf15083-d846-48c5-9d64-c50e775e06ee.png)
+### video
 
-                           
-
-                                                      
+<video src="https://user-images.githubusercontent.com/84323483/139533956-993eb639-5db0-446d-817b-ddd67897f1b9.mp4" controls="" width="50%" height="150%"></video>
+                                                                      
                                                       
 ## Experiment 5 :  Buzzer
                                                       
@@ -178,15 +174,15 @@ void loop()
 digitalWrite(buzzer, HIGH); // produce sound
 }
  ```                                                     
-### Simulation
-![Start Simulating (7)](https://user-images.githubusercontent.com/84323483/137471268-1b407483-0ea9-4f1c-9f35-2e8bcd91e3cf.png)
+### video
+<video src="https://user-images.githubusercontent.com/84323483/139534143-ca70023c-3e5a-4495-a4d3-5a0676265715.mp4" controls="" width="50%" height="150%"></video>
                                                    
                                                    
 ## Experiment 6: 
                                                       
 ### Hardware Required
 * Arduino Uno
-* RED Led x1
+* RGB Led x1
 * Resistor x3
 * Breadboard x1
 * Breadboard Jumper Wire x5
