@@ -76,7 +76,7 @@ digitalWrite(redled, LOW);// turn off red LED
 }
  ```
 ### video
-<video src="https://user-images.githubusercontent.com/84323483/139533812-d6b19522-c7ad-475d-a2e4-48a28e977081.mp4"" controls="" width="50%" height="150%"></video>
+<video src="https://user-images.githubusercontent.com/84323483/139533812-d6b19522-c7ad-475d-a2e4-48a28e977081.mp4" controls="" width="50%" height="150%"></video>
 
 ## Experiment 3 : LED Chasing Effect
 
