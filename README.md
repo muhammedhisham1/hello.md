@@ -29,8 +29,8 @@ void loop()
 }
 ```
 
-### simulation
-<video src="https:Uploading e1.mp4" controls="" width="50%" height="150%"></video>
+### video
+<video src="https://user-images.githubusercontent.com/84323483/139533478-c72c3b34-ae53-41a2-9a2a-47894863fa30.mp4" controls="" width="50%" height="150%"></video>
 
                                                       
 ## Experiment 2 : Traffic Light
