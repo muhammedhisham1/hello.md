@@ -178,7 +178,7 @@ digitalWrite(buzzer, HIGH); // produce sound
 <video src="https://user-images.githubusercontent.com/84323483/139534143-ca70023c-3e5a-4495-a4d3-5a0676265715.mp4" controls="" width="50%" height="150%"></video>
                                                    
                                                    
-## Experiment 6: 
+## Experiment 6:  RGB LED
                                                       
 ### Hardware Required
 * Arduino Uno
