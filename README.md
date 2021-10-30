@@ -30,7 +30,8 @@ void loop()
 ```
 
 ### video
-  <video src="https://youtu.be/Zl2TjRJGJOE.mp4" controls="" width="50%" height="150%"></video>
+
+<video src="https://youtu.be/Zl2TjRJGJOE.mp4" controls="" width="50%" height="150%"></video>
                                                       
 ## Experiment 2 : Traffic Light
                                                       
