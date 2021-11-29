@@ -222,4 +222,63 @@ for(x=0; x<255; x++)
 ### Simulation
 ![Start Simulating (11)](https://user-images.githubusercontent.com/84323483/137471879-8316a53c-ee13-4d44-82db-a877311143fc.png)
 
+## Experiment 5 :  Buzzer
+                                                      
+### Hardware Required
+* Arduino Uno
+* Buzzer x1
+* Breadboard x1
+* Breadboard Jumper Wire x2
+* USB cable x1                                                      
+  
+### Code
+```                                                      
+int buzzer=8;// initialize digital IO pin that controls the buzzer
+void setup() 
+{ 
+  pinMode(buzzer,OUTPUT);// set pin mode as “output”
+} 
+void loop() 
+{
+digitalWrite(buzzer, HIGH); // produce sound
+}
+ ```                                                     
+### video
+<video src="https://user-images.githubusercontent.com/84323483/139534143-ca70023c-3e5a-4495-a4d3-5a0676265715.mp4" controls="" width="50%" height="150%"></video>
+                                                   
+                                                   
+## Experiment 7:  LDR Light Sensor
+                                                      
+### Hardware Required
+* Arduino Uno Board
+* Photo Resistor*1
+* Red M5 LED*1
+* 10KΩ Resistor*1
+* 220Ω Resistor*1
+* Breadboard*1
+* Breadboard Jumper Wire*5
+* USB cable*1
+                                                   
+  
+### Code
+```                                                      
+int potpin=0;// initialize analog pin 0, connected with photovaristor
+int ledpin=11;// initialize digital pin 11, 
+int val=0;// initialize variable val
+void setup()
+{
+pinMode(ledpin,OUTPUT);// set digital pin 11 as “output”
+Serial.begin(9600);// set baud rate at “9600”
+}
+void loop()
+{
+val=analogRead(potpin);// read the value of the sensor and assign it to val
+Serial.println(val);// display the value of val
+analogWrite(ledpin,val/4);// set up brightness（maximum value 255）
+delay(10);// wait for 0.01 
+}
+ ```                                                     
+### Simulation
+![Start Simulating (11)](https://user-images.githubusercontent.com/84323483/137471879-8316a53c-ee13-4d44-82db-a877311143fc.png)
+
                                               
