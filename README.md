@@ -684,8 +684,8 @@ delay(10);
 * Breadboard
 * Connecting Wires
 ### Code
-``` 
-//e = 2;
+```
+ //e = 2;
  //d = 3;
  //c = 4;
  //g = 5;
@@ -693,7 +693,7 @@ delay(10);
  //a = 7;
  //b = 8;
                  
-int num[10][7]={ {0,0,0,1,0,0,0},
+ int num[10][7]={ {0,0,0,1,0,0,0},
                  {1,1,0,1,1,1,0},
                  {0,0,1,0,1,0,0},
                  {1,0,0,0,1,0,0},
@@ -705,38 +705,38 @@ int num[10][7]={ {0,0,0,1,0,0,0},
                  {1,0,0,0,0,0,0} 
 	        };
 
-long r_num;     
-int roll = 12;            
-bool state = true; 
+ long r_num;     
+ int roll = 12;            
+ bool state = true; 
 
-void setup() 
-{
-pinMode(2,OUTPUT);
-pinMode(3,OUTPUT);
-pinMode(4,OUTPUT);
-pinMode(5,OUTPUT);
-pinMode(6,OUTPUT);
-pinMode(7,OUTPUT);
-pinMode(8,OUTPUT);
-pinMode(9,OUTPUT);
-pinMode(12,INPUT_PULLUP);
+ void setup() 
+ {
+ pinMode(2,OUTPUT);
+ pinMode(3,OUTPUT);
+ pinMode(4,OUTPUT);
+ pinMode(5,OUTPUT);
+ pinMode(6,OUTPUT);
+ pinMode(7,OUTPUT);
+ pinMode(8,OUTPUT);
+ pinMode(9,OUTPUT);
+ pinMode(12,INPUT_PULLUP);
 
-digitalWrite(2,HIGH);
-digitalWrite(3,HIGH);
-digitalWrite(4,HIGH);
-digitalWrite(5,HIGH);
-digitalWrite(6,HIGH);
-digitalWrite(7,HIGH);
-digitalWrite(8,HIGH);
+ digitalWrite(2,HIGH);
+ digitalWrite(3,HIGH);
+ digitalWrite(4,HIGH);
+ digitalWrite(5,HIGH);
+ digitalWrite(6,HIGH);
+ digitalWrite(7,HIGH);
+ digitalWrite(8,HIGH);
 
-digitalWrite(9,HIGH);
+ digitalWrite(9,HIGH);
 
-randomSeed(analogRead(0));
-
-}
-
-void loop() 
-{
+ randomSeed(analogRead(0));
+ 
+ }
+ 
+ void loop() 
+ {
  if(state)
  {
    r_num=random(1,6);
@@ -748,8 +748,8 @@ void loop()
     state=false;
  }
 
-while(digitalRead(roll)==LOW)
-{
+ while(digitalRead(roll)==LOW)
+ {
    for(int i=0;i<10;i++)
     {
      for(int j=0;j<7;j++)
@@ -759,9 +759,9 @@ while(digitalRead(roll)==LOW)
      delay(50);
     }
  state=true;
-}
-}
-
+ }
+ }
+ 
  ```                                                     
 ### video
 <video src="https://user-images.githubusercontent.com/84323483/143888739-f7664e1d-1c89-4ea0-bd32-8d6568eac717.mp4" controls="" width="50%" height="150%"></video>
