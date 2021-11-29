@@ -278,7 +278,82 @@ analogWrite(ledpin,val/4);// set up brightness（maximum value 255）
 delay(10);// wait for 0.01 
 }
  ```                                                     
-### Simulation
-![Start Simulating (11)](https://user-images.githubusercontent.com/84323483/137471879-8316a53c-ee13-4d44-82db-a877311143fc.png)
+### video
+<video src="https://user-images.githubusercontent.com/84323483/143879324-fdc6935f-1729-4fa8-857f-8e5323b4fd4a.mp4"></video>
+
+## Experiment 8: Flame Sensor
+                                                      
+### Hardware Required
+* Arduino Uno Board*1
+* Flame Sensor *1
+* Buzzer *1
+* 10K Resistor *1
+* Breadboard Jumper Wire*6
+* USB cable*1                                                    
+  
+### Code
+``` 
+int flame=0;// select analog pin 0 for the sensor
+int Beep=9;// select digital pin 9 for the buzzer
+int val=0;// initialize variable
+ void setup() 
+{
+  pinMode(Beep,OUTPUT);// set LED pin as “output”
+ pinMode(flame,INPUT);// set buzzer pin as “input”
+ Serial.begin(9600);// set baud rate at “9600”
+ } 
+void loop() 
+{ 
+  val=analogRead(flame);// read the analog value of the sensor 
+  Serial.println(val);// output and display the analog value
+  if(val>=600)// when the analog value is larger than 600, the buzzer will buzz
+  {  
+   digitalWrite(Beep,HIGH); 
+   }else 
+   {  
+     digitalWrite(Beep,LOW); 
+    }
+   delay(500); 
+}
+
+ ```                                                     
+### video
+<video src="https://user-images.githubusercontent.com/84323483/143879544-ae639c96-2662-4e69-a4df-325742a18758.mp4"></video>
+
+
+## Experiment 9 :  LM35 Temperature Sensor
+                                                      
+### Hardware Required
+* Arduino Uno  Board*1
+* LM35*1
+* Breadboard*1
+* Breadboard Jumper Wire*5
+* USB cable*                                                      
+  
+### Code
+```                                                      
+int potPin = 0; // initialize analog pin 0 for LM35 temperature sensor
+void setup()
+{
+Serial.begin(9600);// set baud rate at”9600”
+}
+void loop()
+{
+int val;// define variable
+int dat;// define variable
+val=analogRead(0);// read the analog value of the sensor and assign it to val
+dat=(125*val)>>8;// temperature calculation formula
+Serial.print("Tep");// output and display characters beginning with Tep
+Serial.print(dat);// output and display value of dat
+Serial.println("C");// display “C” characters
+delay(500);// wait for 0.5 second
+}
+ ```
+### Serial Monitor Output 
+![lm35](https://user-images.githubusercontent.com/84323483/143880499-579e1ff1-54d6-4553-9399-cfcc25b0febf.png)
+
+### Experiment image
+![photo_2021-11-29_19-27-40](https://user-images.githubusercontent.com/84323483/143880943-418e030c-d717-46c7-8995-d4de7029b6a9.jpg)
+                                        
 
                                               
