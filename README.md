@@ -278,8 +278,8 @@ analogWrite(ledpin,val/4);// set up brightness（maximum value 255）
 delay(10);// wait for 0.01 
 }
  ```                                                     
-### video
-<video src="https://user-images.githubusercontent.com/84323483/143879324-fdc6935f-1729-4fa8-857f-8e5323b4fd4a.mp4"></video>
+### video 
+<video src="https://user-images.githubusercontent.com/84323483/143883518-6ee0c9b4-edb7-4576-86cf-ddf8ad824f42.mp4"></video>
 
 ## Experiment 8: Flame Sensor
                                                       
@@ -356,4 +356,297 @@ delay(500);// wait for 0.5 second
                                     
 ![photo_2021-11-29_19-36-41](https://user-images.githubusercontent.com/84323483/143882302-6bd936bb-5e15-44dc-b3e5-a7a36fd1d637.jpg)
 
-                                              
+ ## Experiment 10: IR Remote Control Using TSOP
+                                                      
+### Hardware Required
+* Arduino Uno Board*1
+* Infrared Remote Controller(You can use TV Remote or any other remote) *1
+* Infrared Receiver *1
+* LED *6
+* 220ΩResistor *6
+* Breadboard Wire *11
+* USB cable*1                                                 
+  
+### Code
+``` 
+#include <IRremote.h>
+int RECV_PIN = 11;
+int LED1 = 2;
+int LED2 = 3;
+int LED3 = 4;
+int LED4 = 5;
+int LED5 = 6;
+int LED6 = 7;
+long on1  = 0x0080412701;
+long off1 = 0x0080412702;
+long on2 = 0x0080412702;
+long off2 = 0x0080412703;
+long on3 = 0x0080412703;
+long off3 = 0x0080412704;
+long on4 = 0x0080412704;
+long off4 = 0x0080412705;
+long on5 = 0x0080412705;
+long off5 = 0x0080412706;
+long on6 = 0x0080412706;
+long off6 = 0x0080412707 ;
+IRrecv irrecv(RECV_PIN);
+decode_results results;
+void setup()
+ {
+  pinMode(RECV_PIN, INPUT);   
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
+  pinMode(LED4, OUTPUT);
+  pinMode(LED5, OUTPUT);
+  pinMode(LED6, OUTPUT);  
+  pinMode(13, OUTPUT);
+  Serial.begin(9600);
+   irrecv.enableIRIn(); // Start the receiver
+ }
+int on = 0;
+unsigned long last = millis();
+void loop() 
+{
+  if (irrecv.decode(&results)) 
+   {
+    // If it's been at least 1/4 second since the last
+    // IR received, toggle the relay
+    if (millis() - last > 250) 
+      {
+       on = !on;
+//       digitalWrite(8, on ? HIGH : LOW);
+       digitalWrite(13, on ? HIGH : LOW);
+      
+      }
+    if (results.value == on1 )
+       digitalWrite(LED1, HIGH);
+    if (results.value == off1 )
+       digitalWrite(LED1, LOW); 
+    if (results.value == on2 )
+       digitalWrite(LED2, HIGH);
+    if (results.value == off2 )
+       digitalWrite(LED2, LOW); 
+    if (results.value == on3 )
+       digitalWrite(LED3, HIGH);
+    if (results.value == off3 )
+       digitalWrite(LED3, LOW);
+    if (results.value == on4 )
+       digitalWrite(LED4, HIGH);
+    if (results.value == off4 )
+       digitalWrite(LED4, LOW); 
+    if (results.value == on5 )
+       digitalWrite(LED5, HIGH);
+    if (results.value == off5 )
+       digitalWrite(LED5, LOW); 
+    if (results.value == on6 )
+       digitalWrite(LED6, HIGH);
+    if (results.value == off6 )
+       digitalWrite(LED6, LOW);        
+    last = millis();      
+irrecv.resume(); // Receive the next value
+  }
+}
+
+ ```                                                     
+### video
+<video src="https://user-images.githubusercontent.com/84323483/143882998-4a2e3aaf-2d2e-4a62-8e4f-6195c5cc0723.mp4"></video>
+
+## Experiment 11 :  Potentiometer analog Value Reading
+                                                      
+### Hardware Required
+* Arduino Uno Board*1]
+* 10K Potentiometer *1
+* Breadboard*1
+* Breadboard Jumper Wire*3
+* USB cable*1                                                    
+  
+### Code
+```                                                      
+int potpin=0;// initialize analog pin 0
+int ledpin=13;// initialize digital pin 13
+int val=0;// define val, assign initial value 0
+void setup()
+{
+pinMode(ledpin,OUTPUT);// set digital pin as “output”
+Serial.begin(9600);// set baud rate at 9600
+}
+void loop()
+{
+digitalWrite(ledpin,HIGH);// turn on the LED on pin 13
+delay(50);// wait for 0.05 second
+digitalWrite(ledpin,LOW);// turn off the LED on pin 13
+delay(50);// wait for 0.05 second
+val=analogRead(potpin);// read the analog value of analog pin 0, and assign it to val 
+Serial.println(val);// display val’s value
+}
+ ```
+### Serial Monitor Output 
+![potentiometre](https://user-images.githubusercontent.com/84323483/143884286-d078ad90-1a49-480d-843b-1ecb1c37e875.png)
+
+### Experiment
+![photo_2021-11-29_19-53-49](https://user-images.githubusercontent.com/84323483/143885038-54f57e38-477e-4c5d-a987-bcc984b786a8.jpg)
+ image
+                                             
+## Experiment 12:  7 Segment Display
+                                                      
+### Hardware Required
+* Arduino Uno Board*1
+* 1-digit LED Segment Display*1
+* 220Ω Resistor*8
+* Breadboard*1
+* Breadboard Jumper Wires *several
+* USB cable*1
+                                                   
+  
+### Code
+```                                                      
+int a=7;// set digital pin 7 for segment a
+int b=6;// set digital pin 6 for segment b
+int c=5;// set digital pin 5 for segment c
+int d=10;// set digital pin 10 for segment d
+int e=11;// set digital pin 11 for segment e
+int f=8;// set digital pin 8 for segment f
+int g=9;// set digital pin 9 for segment g
+int dp=4;// set digital pin 4 for segment dp
+void digital_0(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e,HIGH);
+digitalWrite(f,HIGH);
+digitalWrite(g,LOW);
+digitalWrite(dp,LOW);
+}
+void digital_1(void) // display number 1
+{
+unsigned char j;
+digitalWrite(c,HIGH);// set level as “high” for pin 5, turn on segment c
+digitalWrite(b,HIGH);// turn on segment b
+for(j=7;j<=11;j++)// turn off other segments
+digitalWrite(j,LOW);
+digitalWrite(dp,LOW);// turn off segment dp
+}
+void digital_2(void) // display number 2
+{
+unsigned char j;
+digitalWrite(b,HIGH);
+digitalWrite(a,HIGH);
+for(j=9;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(c,LOW);
+digitalWrite(f,LOW);
+}
+void digital_3(void) // display number 3
+{digitalWrite(g,HIGH);
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(f,LOW);
+digitalWrite(e,LOW);
+}
+void digital_4(void) // display number 4
+{digitalWrite(c,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(a,LOW);
+digitalWrite(e,LOW);
+digitalWrite(d,LOW);
+}
+void digital_5(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b, LOW);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e, LOW);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+}
+void digital_6(void) // display number 6
+{
+unsigned char j;
+for(j=7;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(b,LOW);
+}
+void digital_7(void) // display number 7
+{
+unsigned char j;
+for(j=5;j<=7;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+for(j=8;j<=11;j++)
+digitalWrite(j,LOW);
+}
+void digital_8(void) // display number 8
+{
+unsigned char j;
+for(j=5;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+}
+void digital_9(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e, LOW);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+}
+void setup()
+{
+int i;// set variable
+for(i=4;i<=11;i++)
+pinMode(i,OUTPUT);// set pin 4-11as “output”
+}
+void loop()
+{
+while(1)
+{
+digital_0();// display number 0
+delay(1000);// wait for 1s
+digital_1();// display number 1
+delay(1000);// wait for 1s
+digital_2();// display number 2
+delay(1000); // wait for 1s
+digital_3();// display number 3
+delay(1000); // wait for 1s
+digital_4();// display number 4
+delay(1000); // wait for 1s
+digital_5();// display number 5
+delay(1000); // wait for 1s
+digital_6();// display number 6
+delay(1000); // wait for 1s
+digital_7();// display number 7
+delay(1000); // wait for 1s
+digital_8();// display number 8
+delay(1000); // wait for 1s
+digital_9();// display number 9
+delay(1000); // wait for 1s
+}}
+ ```                                                     
+### video 
+<video src="https://user-images.githubusercontent.com/84323483/143885627-a821c745-eb6a-4b77-a252-4ea5038261c5.mp4"></video>
+
+
+
+
+
+
