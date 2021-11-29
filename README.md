@@ -333,7 +333,7 @@ delay(500);// wait for 0.5 second
                                     
 ![photo_2021-11-29_19-36-41](https://user-images.githubusercontent.com/84323483/143882302-6bd936bb-5e15-44dc-b3e5-a7a36fd1d637.jpg)
 
- ## Experiment 10: IR Remote Control Using TSOP
+## Experiment 10: IR Remote Control Using TSOP
                                                       
 ### Hardware Required
 * Arduino Uno Board*1
