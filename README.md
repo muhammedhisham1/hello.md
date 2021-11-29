@@ -222,30 +222,7 @@ for(x=0; x<255; x++)
 ### Simulation
 ![Start Simulating (11)](https://user-images.githubusercontent.com/84323483/137471879-8316a53c-ee13-4d44-82db-a877311143fc.png)
 
-## Experiment 5 :  Buzzer
-                                                      
-### Hardware Required
-* Arduino Uno
-* Buzzer x1
-* Breadboard x1
-* Breadboard Jumper Wire x2
-* USB cable x1                                                      
-  
-### Code
-```                                                      
-int buzzer=8;// initialize digital IO pin that controls the buzzer
-void setup() 
-{ 
-  pinMode(buzzer,OUTPUT);// set pin mode as “output”
-} 
-void loop() 
-{
-digitalWrite(buzzer, HIGH); // produce sound
-}
- ```                                                     
-### video
-<video src="https://user-images.githubusercontent.com/84323483/139534143-ca70023c-3e5a-4495-a4d3-5a0676265715.mp4" controls="" width="50%" height="150%"></video>
-                                                   
+                    
                                                    
 ## Experiment 7:  LDR Light Sensor
                                                       
