@@ -256,8 +256,7 @@ delay(10);// wait for 0.01
 }
  ```                                                     
 ### video 
-<video src="https://user-images.githubusercontent.com/84323483/143883518-6ee0c9b4-edb7-4576-86cf-ddf8ad824f42.mp4"></video>
-
+<video src="https://user-images.githubusercontent.com/84323483/143883518-6ee0c9b4-edb7-4576-86cf-ddf8ad824f42.mp4" controls="" width="50%" height="150%"></video>
 ## Experiment 8: Flame Sensor
                                                       
 ### Hardware Required
@@ -295,7 +294,7 @@ void loop()
 
  ```                                                     
 ### video
-<video src="https://user-images.githubusercontent.com/84323483/143879544-ae639c96-2662-4e69-a4df-325742a18758.mp4"></video>
+<video src="https://user-images.githubusercontent.com/84323483/143879544-ae639c96-2662-4e69-a4df-325742a18758.mp4" controls="" width="50%" height="150%"></video>
 
 
 ## Experiment 9 :  LM35 Temperature Sensor
@@ -427,7 +426,7 @@ irrecv.resume(); // Receive the next value
 
  ```                                                     
 ### video
-<video src="https://user-images.githubusercontent.com/84323483/143882998-4a2e3aaf-2d2e-4a62-8e4f-6195c5cc0723.mp4"></video>
+<video src="https://user-images.githubusercontent.com/84323483/143882998-4a2e3aaf-2d2e-4a62-8e4f-6195c5cc0723.mp4" controls="" width="50%" height="150%"></video>
 
 ## Experiment 11 :  Potentiometer analog Value Reading
                                                       
@@ -620,8 +619,7 @@ delay(1000); // wait for 1s
 }}
  ```                                                     
 ### video 
-<video src="https://user-images.githubusercontent.com/84323483/143885627-a821c745-eb6a-4b77-a252-4ea5038261c5.mp4"></video>
-
+<video src="https://user-images.githubusercontent.com/84323483/143885627-a821c745-eb6a-4b77-a252-4ea5038261c5.mp4" controls="" width="50%" height="150%"></video>
 
 ## Assignment 1: Thermometer Using 6 LED s and LM35 Sensor
                                                       
@@ -673,7 +671,8 @@ delay(10);
 
  ```                                                     
 ### video
-<video src="https://user-images.githubusercontent.com/84323483/143887763-ef0aaa96-9828-4fd8-b719-506e3d399fa7.mp4"></video>
+<video src="https://user-images.githubusercontent.com/84323483/143887763-ef0aaa96-9828-4fd8-b719-506e3d399fa7.mp4" controls="" width="50%" height="150%"></video>
+
 
 ## Assignment 2: Digital Dice Using 7 Segment Display
                                                       
@@ -765,9 +764,7 @@ while(digitalRead(roll)==LOW)
 
  ```                                                     
 ### video
-<video src="https://user-images.githubusercontent.com/84323483/143888739-f7664e1d-1c89-4ea0-bd32-8d6568eac717.mp4"></video>
-
-
+<video src="https://user-images.githubusercontent.com/84323483/143888739-f7664e1d-1c89-4ea0-bd32-8d6568eac717.mp4" controls="" width="50%" height="150%"></video>
 
 
 
