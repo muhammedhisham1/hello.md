@@ -623,6 +623,160 @@ delay(1000); // wait for 1s
 <video src="https://user-images.githubusercontent.com/84323483/143885627-a821c745-eb6a-4b77-a252-4ea5038261c5.mp4"></video>
 
 
+## Assignment 1: Thermometer Using 6 LED s and LM35 Sensor
+                                                      
+### Hardware Required
+* Arduino Uno/Genuino
+* Breadboard
+* Jumper wires (generic)
+* 3 220Ω resistors
+* 3 LEDs (any color)
+* LM35
+### Code
+``` 
+const int hot = 87; //set hot parameter
+const int cold = 75; //set cold parameter
+void setup() {
+pinMode(A2, INPUT); //sensor
+pinMode(2, OUTPUT); //blue
+pinMode(3, OUTPUT); //green
+pinMode(4, OUTPUT); //red
+Serial.begin(9600);
+}
+void loop() {
+int sensor = analogRead(A2);
+float voltage = (sensor / 1024.0) * 5.0;
+float tempC = (voltage - .5) * 100;
+float tempF = (tempC * 1.8) + 32;
+Serial.print("temp: ");
+Serial.print(tempF);
+if (tempF < cold) { //cold
+digitalWrite(2, HIGH);
+digitalWrite(3, LOW);
+digitalWrite(4, LOW);
+Serial.println(" It's Cold.");
+}
+else if (tempF >= hot) { //hot
+digitalWrite(2, LOW);
+digitalWrite(3, LOW);
+digitalWrite(4, HIGH);
+Serial.println(" It's Hot.");
+}
+else { //fine
+digitalWrite(2, LOW);
+digitalWrite(3, HIGH);
+digitalWrite(4, LOW);
+Serial.println(" It's Fine.");
+}
+delay(10);
+}
+
+ ```                                                     
+### video
+<video src="https://user-images.githubusercontent.com/84323483/143887763-ef0aaa96-9828-4fd8-b719-506e3d399fa7.mp4"></video>
+
+## Assignment 2: Digital Dice Using 7 Segment Display
+                                                      
+### Hardware Required
+* Arduino UNO
+* 7 Segment Display
+* Push Button
+* 7 x 220Ω Resistors (1/4 Watt)
+* Breadboard
+* Connecting Wires
+### Code
+``` 
+//e = 2;
+ //d = 3;
+ //c = 4;
+ //g = 5;
+ //f = 6;
+ //a = 7;
+ //b = 8;
+                 
+int num[10][7]={ {0,0,0,1,0,0,0},
+                 {1,1,0,1,1,1,0},
+                 {0,0,1,0,1,0,0},
+                 {1,0,0,0,1,0,0},
+                 {1,1,0,0,0,1,0},
+                 {1,0,0,0,0,0,1},
+                 {0,0,0,0,0,1,1},
+                 {1,1,0,1,1,0,0},
+                 {0,0,0,0,0,0,0},
+                 {1,0,0,0,0,0,0} 
+	        };
+
+long r_num;     
+int roll = 12;            
+bool state = true; 
+
+void setup() 
+{
+pinMode(2,OUTPUT);
+pinMode(3,OUTPUT);
+pinMode(4,OUTPUT);
+pinMode(5,OUTPUT);
+pinMode(6,OUTPUT);
+pinMode(7,OUTPUT);
+pinMode(8,OUTPUT);
+pinMode(9,OUTPUT);
+pinMode(12,INPUT_PULLUP);
+
+digitalWrite(2,HIGH);
+digitalWrite(3,HIGH);
+digitalWrite(4,HIGH);
+digitalWrite(5,HIGH);
+digitalWrite(6,HIGH);
+digitalWrite(7,HIGH);
+digitalWrite(8,HIGH);
+
+digitalWrite(9,HIGH);
+
+randomSeed(analogRead(0));
+
+}
+
+void loop() 
+{
+ if(state)
+ {
+   r_num=random(1,6);
+   for(int i=0;i<7;i++)
+    {
+      digitalWrite(i+2,num[r_num][i]);
+    }
+     //delay(1500);
+    state=false;
+ }
+
+while(digitalRead(roll)==LOW)
+{
+   for(int i=0;i<10;i++)
+    {
+     for(int j=0;j<7;j++)
+       {
+         digitalWrite(j+2,num[i][j]);
+       }
+     delay(50);
+    }
+ state=true;
+}
+}
+
+ ```                                                     
+### video
+<video src="https://user-images.githubusercontent.com/84323483/143888739-f7664e1d-1c89-4ea0-bd32-8d6568eac717.mp4"></video>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
