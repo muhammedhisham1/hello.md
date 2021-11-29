@@ -350,11 +350,10 @@ delay(500);// wait for 0.5 second
 }
  ```
 ### Serial Monitor Output 
-<image src="![lm35](https://user-images.githubusercontent.com/84323483/143880499-579e1ff1-54d6-4553-9399-cfcc25b0febf.png)" controls="" width="50%" height="150%"></image>
-
-
+![lm35](https://user-images.githubusercontent.com/84323483/143880499-579e1ff1-54d6-4553-9399-cfcc25b0febf.png)"
 
 ### Experiment image
- <image src="![photo_2021-11-29_19-27-40](https://user-images.githubusercontent.com/84323483/143880943-418e030c-d717-46c7-8995-d4de7029b6a9.jpg)" controls="" width="50%" height="150%"></image>                                       
+                                    
+![photo_2021-11-29_19-36-41](https://user-images.githubusercontent.com/84323483/143882302-6bd936bb-5e15-44dc-b3e5-a7a36fd1d637.jpg)
 
                                               
