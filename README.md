@@ -669,7 +669,7 @@ Serial.println(" It's Fine.");
 delay(10);
 }
 
- ```                                                     
+```                                                     
 ### video
 <video src="https://user-images.githubusercontent.com/84323483/143887763-ef0aaa96-9828-4fd8-b719-506e3d399fa7.mp4" controls="" width="50%" height="150%"></video>
 
@@ -684,8 +684,9 @@ delay(10);
 * Breadboard
 * Connecting Wires
 ### Code
+
 ```
- //e = 2;
+//e = 2;
  //d = 3;
  //c = 4;
  //g = 5;
@@ -761,7 +762,7 @@ while(digitalRead(roll)==LOW)
  state=true;
 }
 }
-
+ 
 
 ```                                                     
 ### video
