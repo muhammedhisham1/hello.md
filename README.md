@@ -684,7 +684,8 @@ delay(10);
 * Breadboard
 * Connecting Wires
 ### Code
-```//e = 2;
+```
+ //e = 2;
  //d = 3;
  //c = 4;
  //g = 5;
