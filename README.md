@@ -676,6 +676,105 @@ delay(10);
 https://user-images.githubusercontent.com/84323483/144532619-aa990a9c-872e-423f-8df7-d6ea566a07cd.mp4" controls="" width="50%" height="150%"></video>
 
 
+## Assignment 2 : Rolling Dice using Arduino and 7 Segment Display
+                                                      
+### Hardware Required
+
+* Arduino UNO
+* 7 Segment Display
+* Push Button
+* 7 x 220Ω Resistors (1/4 Watt)
+* Breadboard
+* Power Supply
+* Connecting Wires                                                     
+  
+### Code
+```                                                      
+//e = 2;
+ //d = 3;
+ //c = 4;
+ //g = 5;
+ //f = 6;
+ //a = 7;
+ //b = 8;
+                 
+int num[10][7]={ {0,0,0,1,0,0,0},
+                 {1,1,0,1,1,1,0},
+                 {0,0,1,0,1,0,0},
+                 {1,0,0,0,1,0,0},
+                 {1,1,0,0,0,1,0},
+                 {1,0,0,0,0,0,1},
+                 {0,0,0,0,0,1,1},
+                 {1,1,0,1,1,0,0},
+                 {0,0,0,0,0,0,0},
+                 {1,0,0,0,0,0,0} 
+	        };
+
+long r_num;     
+int roll = 12;            
+bool state = true; 
+
+void setup() 
+{
+pinMode(2,OUTPUT);
+pinMode(3,OUTPUT);
+pinMode(4,OUTPUT);
+pinMode(5,OUTPUT);
+pinMode(6,OUTPUT);
+pinMode(7,OUTPUT);
+pinMode(8,OUTPUT);
+pinMode(9,OUTPUT);
+pinMode(12,INPUT_PULLUP);
+
+digitalWrite(2,HIGH);
+digitalWrite(3,HIGH);
+digitalWrite(4,HIGH);
+digitalWrite(5,HIGH);
+digitalWrite(6,HIGH);
+digitalWrite(7,HIGH);
+digitalWrite(8,HIGH);
+
+digitalWrite(9,HIGH);
+
+randomSeed(analogRead(0));
+
+}
+
+void loop() 
+{
+ if(state)
+ {
+   r_num=random(1,6);
+   for(int i=0;i<7;i++)
+    {
+      digitalWrite(i+2,num[r_num][i]);
+    }
+     //delay(1500);
+    state=false;
+ }
+
+while(digitalRead(roll)==LOW)
+{
+   for(int i=0;i<10;i++)
+    {
+     for(int j=0;j<7;j++)
+       {
+         digitalWrite(j+2,num[i][j]);
+       }
+     delay(50);
+    }
+ state=true;
+}
+}
+ ```
+### Video
+<video src="https://user-images.githubusercontent.com/84323483/144533285-6b029cc3-ee6c-4667-b3e5-2d93eae79b0a.mp4" controls="" width="50%" height="150%"></video>
+
+
+
+
+
+
 
 
                           
